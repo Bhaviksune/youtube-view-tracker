@@ -2,7 +2,7 @@ name: YouTube View Tracker
 
 on:
   schedule:
-  - cron: "*/5 * * * *"
+    - cron: "*/15 * * * *"   # Every 15 minutes
   workflow_dispatch:
 
 jobs:
