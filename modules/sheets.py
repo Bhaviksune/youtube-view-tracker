@@ -21,20 +21,17 @@ def connect_sheet(spreadsheet_id):
 
     return spreadsheet.sheet1
 
+
+def get_last_row(sheet):
+    rows = sheet.get_all_values()
+
+    if len(rows) <= 1:
+        return None
+
+    return rows[-1]
+
+
 def append_row(sheet, row):
-
-    all_rows = sheet.get_all_values()
-
-    if len(all_rows) > 1:
-        last = all_rows[-1]
-
-        if (
-            last[1] == row[1] and
-            last[4] == row[4]
-        ):
-            print("Duplicate Skipped")
-            return
-
     sheet.append_row(
         row,
         value_input_option="USER_ENTERED"
