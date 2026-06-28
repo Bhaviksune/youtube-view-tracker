@@ -72,17 +72,18 @@ def collect_data():
             increase = 0
 
     row = [
-        datetime.now().strftime("%d-%m-%Y"),
-        latest["video_id"],
-        latest["title"],
-        latest["published_at"],
-        datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
-        hour,
-        minutes,
-        latest["views"],
-        increase,
-        "TRACKING"
-    ]
+    datetime.now().strftime("%d-%m-%Y"),
+    latest["video_id"],
+    latest["title"],
+    latest["published_at"],
+    datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
+    hour,
+    minutes,
+    latest["views"],
+    increase,
+    increase,
+    "TRACKING"
+]
 
     append_row(sheet, row)
 
